@@ -58,6 +58,7 @@ const Register: React.FC = () => {
       setError("Registration failed");
       setErrorDescription(err.detail);
       console.log(err.detail);
+      console.log(API_URL);
     }
   };
 
