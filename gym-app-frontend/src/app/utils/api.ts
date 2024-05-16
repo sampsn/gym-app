@@ -2,7 +2,7 @@
 import { error } from "console";
 import { RegistrationDataInput } from "./interfaces";
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL;
+export const API_URL = `https://backend-production-f7fa.up.railway.app`;
 
 class CustomError extends Error {
   detail: string | undefined;
@@ -13,7 +13,7 @@ export const login = async (username: string, password: string) => {
   body.append("username", username);
   body.append("password", password);
 
-  const res = await fetch(`https://backend-production-f7fa.up.railway.app/users/login`, {
+  const res = await fetch(`${API_URL}/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
