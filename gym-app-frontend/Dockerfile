@@ -1,6 +1,9 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18.17.0-alpine
 
+# Set the environment variable for the API URL (will be overridden by Railway)
+ARG NEXT_PUBLIC_API_URL
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -12,9 +15,6 @@ RUN npm ci
 
 # Copy the rest of the application code to the container
 COPY . .
-
-# Set the environment variable for the API URL (will be overridden by Railway)
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
 # Build production build
 RUN npm run build
