@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pyngrok import ngrok
 import uvicorn
+import os
 
 from db import engine, SQLModel
 from routes import authorization, exercises, users, workouts, workout_exercises, exercise_logs
