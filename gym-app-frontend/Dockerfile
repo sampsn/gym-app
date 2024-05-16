@@ -10,11 +10,11 @@ COPY package*.json ./
 # Install any needed packages
 RUN npm install
 
-# Build production build
-RUN npm run build
-
 # Copy the rest of the application code to the container
 COPY . .
+
+# Build production build
+RUN npm run build
 
 # Expose port 3000 to the outside world
 EXPOSE 3000
