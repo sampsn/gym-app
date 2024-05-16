@@ -31,6 +31,7 @@ export const login = async (username: string, password: string) => {
 };
 
 export const register = async (userData: RegistrationDataInput) => {
+  console.log('Backend URL:' process.env.NEXT_PUBLIC_API_URL)
   const res = await fetch(`${API_URL}/users/register`, {
     method: "POST",
     headers: {
