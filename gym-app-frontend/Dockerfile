@@ -13,6 +13,9 @@ RUN npm ci
 # Copy the rest of the application code to the container
 COPY . .
 
+# Set the environment variable for the API URL (will be overridden by Railway)
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
 # Build production build
 RUN npm run build
 
