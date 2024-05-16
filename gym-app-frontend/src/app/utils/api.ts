@@ -2,7 +2,7 @@
 import { error } from "console";
 import { RegistrationDataInput } from "./interfaces";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = "http://backend-production-f7fa.up.railway.app";
 
 class CustomError extends Error {
   detail: string | undefined;
