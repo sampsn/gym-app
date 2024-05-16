@@ -9,7 +9,7 @@ from routes import authorization, exercises, users, workouts, workout_exercises,
 
 app = FastAPI()
 
-origins = ["https://gym-app-frontend-p21x.onrender.com", "http://localhost:3000"]
+origins = ["*", "http://localhost:3000"]
 
 app.add_middleware(
     CORSMiddleware,
