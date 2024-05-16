@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["localhost", "v2.exercisedb.io"],
   },
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+  },
 };
 
 export default nextConfig;
