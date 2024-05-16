@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Layout from "../components/Layout";
 import { register } from "../utils/api";
 import { RegistrationDataInput } from "../utils/interfaces";
+import { API_URL } from "../utils/api";
 
 function newDate() {
   return new Date().toISOString().split("T")[0];
@@ -181,6 +182,7 @@ const Register: React.FC = () => {
         <button type="submit" className="p-2 bg-blue-500 text-white w-full">
           Register
         </button>
+        <h5>{API_URL}</h5>
         {error && <p className="text-red-500 text-center mt-2">{error}</p>}
         {errorDescription && <p className="text-red-500 text-center mt-2">{errorDescription}</p>}
       </form>
